@@ -31,7 +31,7 @@ module.exports = function (packageJson) {
       version: packageJson.version
     },
     paths: {
-      '/lists': {
+      '/links': {
       get: def({
         summary: 'Retrive the list of links',
         operationId: 'hello-world',

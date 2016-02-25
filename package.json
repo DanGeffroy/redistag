@@ -47,7 +47,9 @@
     "winston": "2.x.x",
     "good": "~6.6.0",
     "good-console": "~5.3.1",
-    "inert": "~3.2.0"
+    "inert": "~3.2.0",
+    "jquery": "~2.2.1",
+    "bootstrap": "~3.3.6"
   },
   "devDependencies": {
     "chai": "3.x.x",

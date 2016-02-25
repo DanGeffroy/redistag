@@ -5,6 +5,6 @@
 module.exports = function(dataset){
   return {
     hello: require('./hello'),
-    lists: require('./lists')(dataset)
+    links: require('./links')(dataset)
   };
 };
