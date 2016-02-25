@@ -5,6 +5,8 @@
     <title></title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2-rc.1/css/select2.min.css" rel="stylesheet" />
+
   </head>
   <body>
     <div class="container">
@@ -15,8 +17,11 @@
           <input id="tagSearch" type="text" class="form-control" placeholder="ex : Redis" aria-describedby="basic-addon1">
           <button id="button" type="button" class="btn btn-default">rechercher</button>
       </div>
+      <div class="row">
+        <select id="tagSearch2" class="js-example-basic-multiple" multiple="multiple">
 
-
+        </select>
+      </div>
     </div>
     <div class="row" style="padding-top:20px;">
       <ul id="listLinks" class="list-group">
@@ -25,8 +30,12 @@
     </div>
 
     <!-- Latest compiled JavaScript -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2-rc.1/js/select2.min.js"></script>
     <script type="text/javascript" src="bundle.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
 
   </body>
 </html>

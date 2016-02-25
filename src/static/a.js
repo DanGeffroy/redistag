@@ -1,5 +1,5 @@
 module.exports = function(){
-  var $ = require("jquery");
+  /*var $ = require("jquery");*/
   var tags =[];
   var links =[];
   $.getJSON( "/links", function( json ) {
@@ -13,6 +13,12 @@ module.exports = function(){
     });
     var uniqueTag = filterDouble(tags);
     console.log(uniqueTag);
+    uniqueTag.forEach(function(tag){
+      console.log(tag);
+      $("#tagSearch2").append("<option value='"+tag+"'>"+tag+"</option>");
+      $('select').select2();
+      $(".js-example-basic-single").select2();
+    });
  });
 
  function afficherLinks(entry,res){
@@ -57,7 +63,16 @@ $(document).ready(function(){
     $("#button").click(function(){
       var tags = $("#tagSearch").val().split(" ");
       filtrer(tags);
-
     });
+
+    $("#tagSearch2").change(function(){
+
+      console.log($("#tagSearch2").val());
+      filtrer($("#tagSearch2").val());
+    });
+
+
+    $('select').select2();
+    $(".js-example-basic-single").select2();
   });
 };
