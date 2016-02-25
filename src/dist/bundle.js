@@ -69,7 +69,11 @@ $(document).ready(function(){
     $("#tagSearch2").change(function(){
 
       console.log($("#tagSearch2").val());
-      filtrer($("#tagSearch2").val());
+      var tagFilters =[]
+      if($("#tagSearch2").val() != null){
+        tagFilters = $("#tagSearch2").val()
+      }
+      filtrer(tagFilters);
     });
 
 
