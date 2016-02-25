@@ -1,0 +1,2 @@
+lancer serveur : npm2 start
+compiler src/static/main.js : npm2 run build voir package.json
