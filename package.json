@@ -1,27 +1,58 @@
 {
-  "name": "redistag",
-  "version": "0.0.0",
-  "description": "",
+  "name": "iadvize-my-first-nodejs-service",
+  "title": "my-first-nodejs-service",
+  "private": true,
+  "version": "2.0.0",
+  "tos": "ToS",
+  "description": "my awesome service",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha -r bootstrap.test.js 'src/**/*.test.js'",
+    "test-ci": "XUNIT_FILE=${WORKSPACE}/junit.xml mocha -R xunit-file -r bootstrap.test.js 'src/**/*.test.js'",
+    "test-watch": "mocha -w -G -r bootstrap.test.js 'src/**/*.test.js'",
+    "check-build": "check-build",
+    "ci": "npm run test-ci && npm run check-build",
+    "start": "/hometu/etudiants/g/e/E134417F/lp/node-v4.3.1-linux-x64/bin/node server.js",
+    "build": "browserify src/static/main.js -o src/dist/bundle.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/adNNNN/redistag.git"
+    "url": "https://github.com/iadvize/my-first-nodejs-service.git"
   },
-  "author": "",
-  "license": "BSD-2-Clause",
+  "author": {
+    "name": "Francois-Guillaume Ribreau ",
+    "url": "http://fgribreau.com/",
+    "email": "npm@fgribreau.com"
+  },
+  "engines": {
+    "node": "4"
+  },
+  "license": {
+    "name": "iAdvize",
+    "url": "http://iadvize.com"
+  },
   "bugs": {
-    "url": "https://github.com/adNNNN/redistag/issues"
+    "url": "https://github.com/iadvize/my-first-nodejs-service/issues"
   },
+  "homepage": "https://github.com/iadvize/my-first-nodejs-service",
   "dependencies": {
-    "common-env": "~5.2.1",
-    "winston": "~2.1.1",
+    "async": "1.x.x",
+    "common-env": "5.x.x",
+    "deepmerge": "0.2.x",
+    "hapi": "11.x.x",
+    "lodash": "3.x.x",
+    "swaggerize-hapi": "1.x.x",
+    "wascally": "0.x.x",
+    "when": "3.x.x",
+    "winston": "2.x.x",
     "good": "~6.6.0",
-    "hapi": "~13.0.0",
-    "lodash": "~4.5.1",
-    "inert": "~3.2.0",
-    "good-console": "~5.3.1"
+    "good-console": "~5.3.1",
+    "inert": "~3.2.0"
+  },
+  "devDependencies": {
+    "chai": "3.x.x",
+    "check-build": "*",
+    "mocha": "2.x.x",
+    "xunit-file": "0.0.6"
   }
 }
